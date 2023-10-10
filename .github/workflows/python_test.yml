@@ -3,22 +3,23 @@ name: Python Tests
 on:
   push:
     branches:
-       - main
-jobs: 
+      - master
+
+jobs:
   test:
-     runs-on: ubuntu-latest
-    
-     steps:
-      - name: Checkout code 
-        uses: actions/checkout@v2
-      
-      - name: Set up Python
-         uses: actions/setup-python@v2 
-        with: 
-         python-version: 3.x # Replace with desired python version
-      
-     - name: Install dependencies 
-      run: pip install -r requirements.txt
-# If you have a requirements. txt file
-   - name: Run tests 
-     run: python -m unittest discover
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Replace with your desired Python version
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt  # If you have a requirements.txt file
+
+    - name: Run tests
+      run: python -m unittest discover
