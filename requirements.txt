@@ -1,0 +1,11 @@
+# Example requirements.txt
+
+# Core libraries
+requests==2.26.0  # Replace with the desired version
+numpy==1.21.2    # Replace with the desired version
+
+# Development tools (optional)
+pytest==6.2.5     # Replace with the desired version if using pytest for testing
+coverage==5.5     # Replace with the desired version if using test coverage
+
+# Other dependencies (add as needed)
